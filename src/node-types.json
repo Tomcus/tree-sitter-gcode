@@ -81,6 +81,10 @@
     }
   },
   {
+    "type": "\n",
+    "named": false
+  },
+  {
     "type": "arg_letter",
     "named": true
   },

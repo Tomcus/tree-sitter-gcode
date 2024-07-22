@@ -9,15 +9,41 @@
       }
     },
     "_definition": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "comment"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "comment"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "command"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "comment"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "SYMBOL",
-          "name": "command"
+          "type": "STRING",
+          "value": "\n"
         }
       ]
     },
@@ -32,7 +58,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[^\\n]*\\n"
+            "value": "[^\\n]*"
           }
         ]
       }
@@ -72,7 +98,7 @@
     },
     "gcode_number": {
       "type": "PATTERN",
-      "value": "[0-9\\.]+"
+      "value": "([1-9][0-9\\.]*|0)"
     },
     "arg": {
       "type": "SEQ",
