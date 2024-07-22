@@ -1,0 +1,27 @@
+=======================
+GCode with comments
+=======================
+
+; This a whole line blocking comment
+G28 ; This a line comment, that shouldn't block the gcode
+G0 ; Next gcode
+
+---
+
+(source_file
+    (comment)
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+    (comment)
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+    (comment)
+)

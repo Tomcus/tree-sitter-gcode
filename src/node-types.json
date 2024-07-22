@@ -1,0 +1,99 @@
+[
+  {
+    "type": "arg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_letter",
+          "named": true
+        },
+        {
+          "type": "arg_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arg_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg",
+          "named": true
+        },
+        {
+          "type": "gcode",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "gcode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "gcode_letter",
+          "named": true
+        },
+        {
+          "type": "gcode_number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arg_letter",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "gcode_letter",
+    "named": true
+  },
+  {
+    "type": "gcode_number",
+    "named": true
+  }
+]

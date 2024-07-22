@@ -1,0 +1,37 @@
+==================
+Basic GCode parsing
+==================
+
+G0
+M1
+T2
+P3
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+    )
+)

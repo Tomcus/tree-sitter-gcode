@@ -1,0 +1,77 @@
+==================
+Basic GCode parsing
+==================
+
+G1 E-2 F2400
+G0 Z40 F10000
+G0 X48 Z0.05 F8000
+G0 X51 Z0.2 F8000
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+    )
+)
