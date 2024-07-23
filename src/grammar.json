@@ -139,7 +139,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\\"[^\\\"]\\\""
+          "value": "\\\"[^\\\"]*\\\""
         },
         {
           "type": "PATTERN",

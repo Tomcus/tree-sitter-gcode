@@ -2,8 +2,8 @@
 GCode with string args
 ==================
 
-M862.6 P"Input shaper"
 M486 AShape-Box
+M862.6 P"Input shaper"
 
 ---
 
