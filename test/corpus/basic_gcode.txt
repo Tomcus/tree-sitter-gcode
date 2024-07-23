@@ -3,8 +3,10 @@ Basic GCode parsing
 ==================
 
 G0
-M1
-T2
+M123.4
+
+
+T20
 P3
 
 ---

@@ -17,7 +17,7 @@ module.exports = grammar({
         _arg_numeric: $ => /-?[0-9]+(\.[0-9]+)?/,
         _arg_string: $ => choice(
             /\"[^\"]*\"/,
-            /\S+/,
+            /[^;\s]+/,
         ),
     }
 });

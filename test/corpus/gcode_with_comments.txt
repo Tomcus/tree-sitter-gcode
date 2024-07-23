@@ -4,7 +4,7 @@ GCode with comments
 
 ; This a whole line blocking comment
 G28 ; This a line comment, that shouldn't block the gcode
-G0 ; Next gcode
+M862.1 P0.4 ; nozzle diameter check
 
 ---
 
@@ -21,6 +21,10 @@ G0 ; Next gcode
         (gcode
             (gcode_letter)
             (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
         )
     )
     (comment)
