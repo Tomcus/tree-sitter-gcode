@@ -108,8 +108,16 @@
           "name": "arg_letter"
         },
         {
-          "type": "SYMBOL",
-          "name": "arg_value"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "arg_value"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

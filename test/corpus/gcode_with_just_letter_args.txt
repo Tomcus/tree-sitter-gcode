@@ -1,0 +1,19 @@
+==================
+GCode with string args
+==================
+
+M84 E
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+        )
+    )
+)

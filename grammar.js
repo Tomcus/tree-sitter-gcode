@@ -8,7 +8,7 @@ module.exports = grammar({
         gcode: $ => seq($.gcode_letter, $.gcode_number),
         gcode_letter: $ => /G|M|T|P/,
         gcode_number: $ => /([1-9][0-9\.]*|0)/,
-        arg: $ => seq($.arg_letter, $.arg_value),
+        arg: $ => seq($.arg_letter, optional($.arg_value)),
         arg_letter: $ => /[A-Z]/,
         arg_value: $ => choice(
             $._arg_numeric,
