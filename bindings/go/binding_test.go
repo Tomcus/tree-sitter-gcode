@@ -3,8 +3,8 @@ package tree_sitter_gcode_test
 import (
 	"testing"
 
-	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/tree-sitter/tree-sitter-gcode"
+	tree_sitter "github.com/tree-sitter/go-tree-sitter"
+	tree_sitter_gcode "github.com/tree-sitter/tree-sitter-gcode/bindings/go"
 )
 
 func TestCanLoadGrammar(t *testing.T) {

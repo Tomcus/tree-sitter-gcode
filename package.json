@@ -5,9 +5,10 @@
   "main": "grammar.js",
   "types": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
   },
   "author": "Tomas Vybiral <vybiraltomas@seznam.cz>",
   "license": "MIT",
@@ -38,7 +39,11 @@
   "tree-sitter": [
     {
       "scope": "source.gcode",
-      "injection-regex": "^gcode$"
+      "injection-regex": "^gcode$",
+      "file-types": [
+        "gcode"
+      ],
+      "highlights": "queries/highlights.scm"
     }
   ]
 }
