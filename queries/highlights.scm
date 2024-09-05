@@ -1,5 +1,5 @@
 (comment) @comment
 
-(gcode) @property
+(gcode) @function.call
 
-(arg) @variable.builtin
+(arg) @variable.parameter
