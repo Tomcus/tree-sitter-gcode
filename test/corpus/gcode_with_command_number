@@ -1,0 +1,32 @@
+==================
+GCode with command number
+==================
+
+N0 G29 G
+N1 G1 X150
+
+---
+
+(source_file
+    (command
+        (command_number)
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+        )
+    )
+    (command
+        (command_number)
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value)
+        )
+    )
+)

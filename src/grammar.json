@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "gcode",
   "rules": {
     "source_file": {
@@ -67,6 +68,18 @@
       "type": "SEQ",
       "members": [
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "command_number"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "gcode"
         },
@@ -78,6 +91,10 @@
           }
         }
       ]
+    },
+    "command_number": {
+      "type": "PATTERN",
+      "value": "(N[1-9][0-9\\.]*|N0)"
     },
     "gcode": {
       "type": "SEQ",
@@ -166,5 +183,6 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

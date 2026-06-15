@@ -36,6 +36,10 @@
           "named": true
         },
         {
+          "type": "command_number",
+          "named": true
+        },
+        {
           "type": "gcode",
           "named": true
         }
@@ -64,6 +68,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -86,6 +91,10 @@
   },
   {
     "type": "arg_letter",
+    "named": true
+  },
+  {
+    "type": "command_number",
     "named": true
   },
   {
