@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "gcode",
+      "camelcase": "GCode",
+      "title": "GCode parser for tree-sitter",
+      "scope": "source.gcode",
+      "file-types": [
+        "gcode"
+      ],
+      "injection-regex": "^gcode$",
+      "class-name": "TreeSitterGcode"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Simple GCode parser implemented in tree-sitter",
+    "authors": [
+      {
+        "name": "Tomas Vybiral",
+        "email": "vybiraltomas@seznam.cz",
+        "url": "https://github.com/Tomcus"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Tomcus/tree-sitter-gcode",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
