@@ -1,5 +1,5 @@
 ==================
-GCode with string args
+GCode with only single letter args
 ==================
 
 M84 E
