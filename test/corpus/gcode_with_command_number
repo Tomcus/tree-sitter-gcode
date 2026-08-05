@@ -26,7 +26,9 @@ N1 G1 X150
         )
         (arg
             (arg_letter)
-            (arg_value)
+            (arg_value
+                (number)
+            )
         )
     )
 )

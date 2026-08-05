@@ -36,7 +36,9 @@ G28
         )
         (arg
             (arg_letter)
-            (arg_value)
+            (arg_value
+                (number)
+            )
         )
     )
     (comment)
@@ -47,7 +49,9 @@ G28
         )
         (arg
             (arg_letter)
-            (arg_value)
+            (arg_value
+                (number)
+            )
         )
     )
     (comment)

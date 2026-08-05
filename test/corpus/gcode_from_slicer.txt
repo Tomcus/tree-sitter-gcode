@@ -1,11 +1,9 @@
 ==================
-Basic GCode parsing
+Slicer values without a leading zero
 ==================
 
-G1 E-2 P2400
-G0 Z40 F10000
-G0 X48 Z0.05 F8000
-G0 X51 Z0.2 F8000
+G1 X10.5 Y-3 E.24 F1200
+G1 Z.8 E-.02
 
 ---
 
@@ -27,12 +25,6 @@ G0 X51 Z0.2 F8000
                 (number)
             )
         )
-    )
-    (command
-        (gcode
-            (gcode_letter)
-            (gcode_number)
-        )
         (arg
             (arg_letter)
             (arg_value
@@ -63,11 +55,70 @@ G0 X51 Z0.2 F8000
                 (number)
             )
         )
+    )
+)
+
+==================
+Version strings stay a single string value
+==================
+
+M115 U3.13.2
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value
+                (string)
+            )
+        )
+    )
+)
+
+==================
+Debug D codes
+==================
+
+D80 P0
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
         (arg
             (arg_letter)
             (arg_value
                 (number)
             )
+        )
+    )
+)
+
+==================
+Blank lines between commands
+==================
+
+G28
+
+G1 X0
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
         )
     )
     (command
@@ -81,17 +132,33 @@ G0 X51 Z0.2 F8000
                 (number)
             )
         )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
+    )
+)
+
+==================
+Known limitation: values containing spaces
+==================
+
+M486 Auniversal wall mount hole.stl
+
+---
+
+(source_file
+    (ERROR
+        (command
+            (gcode
+                (gcode_letter)
+                (gcode_number)
+            )
+            (arg
+                (arg_letter)
+                (arg_value
+                    (string)
+                )
             )
         )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
+        (UNEXPECTED 'w')
+        (UNEXPECTED 'm')
+        (UNEXPECTED 'h')
     )
 )

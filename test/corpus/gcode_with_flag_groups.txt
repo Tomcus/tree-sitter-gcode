@@ -1,11 +1,50 @@
 ==================
-Basic GCode parsing
+Axis letters written together are separate flags
 ==================
 
-G1 E-2 P2400
-G0 Z40 F10000
-G0 X48 Z0.05 F8000
-G0 X51 Z0.2 F8000
+G28 XY S
+M84 X Y E
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+        )
+        (arg
+            (arg_letter)
+        )
+        (arg
+            (arg_letter)
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+        )
+        (arg
+            (arg_letter)
+        )
+        (arg
+            (arg_letter)
+        )
+    )
+)
+
+==================
+A bare flag does not take the next argument as its value
+==================
+
+M106 P5 R A125 B10
 
 ---
 
@@ -23,63 +62,6 @@ G0 X51 Z0.2 F8000
         )
         (arg
             (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-    )
-    (command
-        (gcode
-            (gcode_letter)
-            (gcode_number)
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-    )
-    (command
-        (gcode
-            (gcode_letter)
-            (gcode_number)
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
-        )
-    )
-    (command
-        (gcode
-            (gcode_letter)
-            (gcode_number)
-        )
-        (arg
-            (arg_letter)
-            (arg_value
-                (number)
-            )
         )
         (arg
             (arg_letter)

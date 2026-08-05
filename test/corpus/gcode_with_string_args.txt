@@ -2,8 +2,9 @@
 GCode with string args
 ==================
 
-M486 AShape-Box
+M486 Abox.stl
 M862.6 P"Input shaper"
+M862.3 P "MK4S"
 
 ---
 
@@ -15,7 +16,9 @@ M862.6 P"Input shaper"
         )
         (arg
             (arg_letter)
-            (arg_value)
+            (arg_value
+                (string)
+            )
         )
     )
     (command
@@ -25,7 +28,47 @@ M862.6 P"Input shaper"
         )
         (arg
             (arg_letter)
-            (arg_value)
+            (arg_value
+                (string)
+            )
+        )
+    )
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+            (arg_value
+                (string)
+            )
+        )
+    )
+)
+
+==================
+Known limitation: an unquoted value starting with an upper case letter
+==================
+
+M486 AShape-Box
+
+---
+
+(source_file
+    (command
+        (gcode
+            (gcode_letter)
+            (gcode_number)
+        )
+        (arg
+            (arg_letter)
+        )
+        (arg
+            (arg_letter)
+            (arg_value
+                (string)
+            )
         )
     )
 )

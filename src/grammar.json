@@ -111,11 +111,11 @@
     },
     "gcode_letter": {
       "type": "PATTERN",
-      "value": "G|M|T|P"
+      "value": "G|M|T|P|D"
     },
     "gcode_number": {
       "type": "PATTERN",
-      "value": "([1-9][0-9\\.]*|0)"
+      "value": "[0-9]+(\\.[0-9]+)?"
     },
     "arg": {
       "type": "SEQ",
@@ -147,19 +147,22 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_arg_numeric"
+          "name": "number"
         },
         {
           "type": "SYMBOL",
-          "name": "_arg_string"
+          "name": "string"
         }
       ]
     },
-    "_arg_numeric": {
-      "type": "PATTERN",
-      "value": "-?[0-9]+(\\.[0-9]+)?"
+    "number": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[-+]?([0-9]+\\.[0-9]*|\\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?"
+      }
     },
-    "_arg_string": {
+    "string": {
       "type": "CHOICE",
       "members": [
         {
@@ -167,8 +170,11 @@
           "value": "\\\"[^\\\"]*\\\""
         },
         {
-          "type": "PATTERN",
-          "value": "[^;\\s]+"
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "PATTERN",
+            "value": "[^;\\sA-Z][^;\\s]*"
+          }
         }
       ]
     }
